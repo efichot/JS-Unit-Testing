@@ -15,7 +15,10 @@ function damageShip(ship, coordinates) {
 }
 
 function fireUp(player, coordinates) {
-    let touch = false;
+    if (coordinates.length !== 2) {
+        let err = new Error('Invalid coordinates param!');
+        throw err;
+    }
     player.ships.forEach(function(ship, i) {
         ship.locations.forEach(function(loc, i2) {
             if (JSON.stringify(loc) === JSON.stringify(coordinates)) {

@@ -111,4 +111,14 @@ describe('fireUp', function() {
         
         expect(player.ships[0].damage).to.be.empty;
     })
+
+    it('it should throw an error if coordinates are non valid!', function() {
+        let handler = function() { fireUp(player, [0,0,0]) };
+
+        expect(handler).to.throw(Error);
+
+        handler = function() { fireUp(player, []) };
+
+        expect(handler).to.throw('Invalid coordinates param!');
+    })
 })
