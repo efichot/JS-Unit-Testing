@@ -6,7 +6,7 @@ With a small battleship game.
 - [x] Motcha and Chai
 - [x] Writing Testable Code
 
-## mocha --reporter markdown
+## --> mocha --reporter markdown
 
 # TOC
    - [checkForChip](#checkforchip)
